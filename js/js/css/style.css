@@ -1,0 +1,109 @@
+footer {
+    
+    height: 60px;
+    width: 100%;
+}
+
+.dp {
+    width: 30px;
+    height: 30px;
+   border-radius: 50%;
+   
+}
+.viral {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.xs {
+    display: flex;
+    margin-left: 5%;
+}
+.comments {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.download {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.share {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.x1 {
+width: 20%;
+float: left;
+margin-left: 10%;
+}
+.x2 {
+  width: 20%;
+float: left;
+margin-left: 10%;
+}
+.x3 {
+  width: 20%;
+float: left;
+margin-left: 10%;
+}
+.x4 {
+  width: 20%;
+float: left;
+margin-left: 10%;
+}
+.x5 {
+  width: 20%;
+float: left;
+margin-left: 10%;
+}
+.divmodal {
+  display: flex;
+}
+.x1 {
+  width: 40px;
+  height: 40px;
+  margin-left: 0%;
+}
+.excomment {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  
+  }
+  
+.sendcomment {
+  width: 50px;
+  height: 50px;
+}
+.commentarea {
+  display: flex;
+  background-color: white;
+  width: 98%;
+  border-radius: 10px;
+  height: 50px;
+}
+.dpcomment {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+.examplecomment {
+  display: flex;
+  max-width:  70%;
+  min-height: 50px;
+  background-color: whitesmoke;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+.time {
+  margin-left: 5%;
+}
+.memeimgs {
+  width: 100%;
+  height: 620px;
+}
