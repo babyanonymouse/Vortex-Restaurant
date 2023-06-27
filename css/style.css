@@ -189,8 +189,9 @@
 }
 
 /*  rgb(88, 90, 90)  #3d0b0b #2b0808 */
+/* here xz1 */
 .animated-button1 {
-  background: linear-gradient(-30deg, rgb(88, 90, 90) 50%, rgb(88, 90, 90) 50%);
+  background: linear-gradient(-30deg, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
   padding: 10px 20px;
   margin: 12px;
   display: inline-block;
@@ -1723,7 +1724,7 @@
 
 /* The price button */
 .animated-buttonx {
-  background: linear-gradient(-30deg, rgb(88, 90, 90) 50%, rgb(88, 90, 90) 50%);
+  background: linear-gradient(-30deg, rgba(0, 0, 0, 0.8) 50%, rgb(88, 90, 90) 50%);
   padding: 10px 20px;
   margin: 12px;
   display: inline-block;
