@@ -155,12 +155,14 @@ section{
     justify-content: center;
     margin-bottom: 40px;
   }
-  
-  .text-light {
+.text-light {
     text-align: center;
   }
+  .navbar-scroll {
+    background-color: black !important;
+  }
 
-    </style>
+ </style>
 </head>
 <body>
 
@@ -193,6 +195,7 @@ section{
     </header>
     
     
+
     <!-- End the nav bar -->
     <br><br>
     <br><br><br>
@@ -556,7 +559,23 @@ section{
     <b style="color: white;" >&copy; 2023  Vortex_Restaurant_ke</b>
 </center> 
     
+<script>
+    // Add an event listener to the window scroll event
+    window.addEventListener('scroll', function() {
+        var cardShadowElement = document.querySelector('.card-shadow');
+        var navbar = document.querySelector('nav.navbar');
+        var cardShadowElementPosition = cardShadowElement.getBoundingClientRect().top;
 
+        // Check if the card-shadow element is in the viewport
+        if (cardShadowElementPosition <= window.innerHeight && cardShadowElementPosition >= 0) {
+            // Add the 'navbar-scroll' class to the navbar
+            navbar.classList.add('navbar-scroll');
+        } else {
+            // Remove the 'navbar-scroll' class from the navbar
+            navbar.classList.remove('navbar-scroll');
+        }
+    });
+</script>
 
 </body>
 </html>
