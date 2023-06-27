@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="js/js/bootstrap.js">
+<script src="js/js/bootstrap.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
@@ -161,7 +162,13 @@ section{
   .navbar-scroll {
     background-color: black !important;
   }
-
+  .yellow-background {
+  background-color: rgb(255, 193, 7);
+  transition: background-color 0.4s;
+}
+.no-transition {
+    transition: none !important;
+}
  </style>
 </head>
 <body>
@@ -169,7 +176,7 @@ section{
     <header class="row" >
      <div class="col-md-12"  >
     
-    <nav class="navbar   navbar-expand-md navbar-warning fixed-top  "  style="padding: 0%;"  >
+    <nav class="navbar  navbar-expand-md navbar-warning fixed-top  "  style="padding: 0%;"  >
         <a href="index.html" class="navbar-brand" >
            <img src="images/vt.png" alt="our brand"  width="180" height="90" style="border-radius: 10px;  " class="img">  
         </a>
@@ -560,22 +567,76 @@ section{
 </center> 
     
 <script>
-    // Add an event listener to the window scroll event
-    window.addEventListener('scroll', function() {
-        var cardShadowElement = document.querySelector('.card-shadow');
-        var navbar = document.querySelector('nav.navbar');
-        var cardShadowElementPosition = cardShadowElement.getBoundingClientRect().top;
-
-        // Check if the card-shadow element is in the viewport
-        if (cardShadowElementPosition <= window.innerHeight && cardShadowElementPosition >= 0) {
-            // Add the 'navbar-scroll' class to the navbar
-            navbar.classList.add('navbar-scroll');
-        } else {
-            // Remove the 'navbar-scroll' class from the navbar
-            navbar.classList.remove('navbar-scroll');
-        }
+    // Get the navigation element
+    var navbar = document.querySelector('.navbar');
+  
+    // Get the welcome note element
+    var welcomeNote = document.querySelector('.text-light');
+  
+    // Get the navbar-nav element
+    var navbarNav = document.querySelector('.navbar-nav');
+  
+    // Get the position of the welcome note element
+    var welcomeNotePosition = welcomeNote.offsetTop;
+  
+    // Store the last scroll position
+    var lastScrollPosition = window.pageYOffset;
+  
+    // Listen for scroll events
+    window.addEventListener('scroll', function () {
+      // Get the current scroll position
+      var currentScrollPosition = window.pageYOffset;
+  
+      // Determine the scroll direction
+      var scrollDirection = currentScrollPosition > lastScrollPosition ? 'down' : 'up';
+  
+      // Update the last scroll position
+      lastScrollPosition = currentScrollPosition;
+  
+      // Toggle the CSS class based on the scroll direction and position of the welcome note
+      if (scrollDirection === 'down' && currentScrollPosition > welcomeNotePosition) {
+        navbar.classList.add('yellow-background');
+        navbar.classList.remove('no-transition'); // Remove no-transition class when adding yellow-background class
+      } else if (scrollDirection === 'up' && currentScrollPosition <= welcomeNotePosition) {
+        navbar.classList.remove('yellow-background');
+        navbar.classList.add('no-transition'); // Add no-transition class when removing yellow-background class
+      }
     });
-</script>
+  
+    // Add event listeners for hover and mouseout on navbar-nav items
+    var navbarItems = navbarNav.getElementsByTagName('a');
+    for (var i = 0; i < navbarItems.length; i++) {
+      navbarItems[i].addEventListener('mouseover', handleNavItemHover);
+      navbarItems[i].addEventListener('mouseout', handleNavItemMouseout);
+    }
+  
+    // Function to handle navbar-nav item hover
+    function handleNavItemHover(event) {
+      // Check if the nav background color is yellow
+      if (navbar.classList.contains('yellow-background')) {
+        // Change the text color to black on hover
+        event.target.style.color = 'black';
+      }
+    }
+  
+    // Function to handle navbar-nav item mouseout
+    function handleNavItemMouseout(event) {
+      // Check if the nav background color is yellow
+      if (navbar.classList.contains('yellow-background')) {
+        // Revert the text color to default on mouseout
+        event.target.style.color = '';
+      }
+    }
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
 
 </body>
 </html>
