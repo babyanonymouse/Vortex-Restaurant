@@ -97,40 +97,19 @@ section{
   .mya:hover::before{
     width: 100%;
   }
-  
-/* Add the following CSS styles */
-.image-container {
-  position: relative;
-  overflow: hidden;
+  .google-map {
+    padding-bottom: 50%;
+    position: relative;
 }
 
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 0, 0.8); /* Yellow background color */
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 10px;
 }
-
-.image-text {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.image-container:hover .image-overlay {
-  opacity: 1;
-}
-
-
-
 
     </style>
 </head>
@@ -202,125 +181,112 @@ section{
 
 <section  class="row ms-2" >
 
-<!-- Inside the corresponding section tag -->
-<!-- Inside the corresponding section tag -->
-<div class="col-md-4">
-    <div class="card-shadow">
-      <div class="card-body">
-        <h3 class="text-light" style="font-family: pacifico;">beef</h3>
-        <div class="left bg-warning" style="margin-bottom: 7px;"></div>
-        <div class="image-container">
-          <img src="images/kenyan-food-beef-stew.jpg" alt="beef stew" width="100%" height="250px" style="border-radius: 10px;">
-          <div class="image-overlay">
-            <span class="image-text">Text on Hover</span>
-          </div>
+<div class="col-md-4" >
+    <div class="card-shadow " style="width: 400px;" >
+        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.8);  align-items: center; border-radius: 10px; padding: 5px;"  >
+            <h3 class="text-light" style="font-family: Pacifico;" > beef</h3>
+            <div class="left bg-warning" style="width: 80px;" ></div> <br>
+         <img src="images/kenyan-food-beef-stew.jpg" alt="mutura" width="100%" height="250px" style="border-radius: 10px;" >
+         
+         <div class="pricebtn" >
+            <center>         <a href="#" class="animated-buttonx text-light">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ksh 570
+          </a>
+        </center>
+
         </div>
-        <div class="pricebtn">
-          <center>
-            <a href="#" class="animated-buttonx text-light">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              ksh 570
-            </a>
-          </center>
+         
+      
         </div>
-      </div>
     </div>
-  </div>
-  
-  
+
+</div>
 
 
-<!-- Inside the corresponding section tag -->
-<div class="col-md-4">
-    <div class="card-shadow">
-      <div class="card-body">
-        <h3 class="text-light">beef</h3>
-        <div class="left bg-warning"></div>
-        <div class="image-container">
-          <img src="images/kenyan-food-pilau.jpg" alt="pilau" width="100%" height="250px" style="border-radius: 10px;">
-          <div class="image-overlay">
-            <span class="image-text">Text on Hover</span>
-          </div>
+<div class="col-md-4" >
+    <div class="card-shadow " style="width: 400px; " >
+      
+      
+        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.8); border-radius: 10px; padding: 5px;"  >
+            <h3 class="text-light" style="font-family: Pacifico;"  > pilau</h3>
+            <div class="left bg-warning"  style="width: 80px; "></div> <br>
+            <img src="images/kenyan-food-pilau.jpg" alt="mutura" width="100%" height="250px" style="border-radius: 10px;" >
+            <div class="pricebtn" >
+                <center>         <a href="#" class="animated-buttonx text-light">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                ksh 250
+              </a>
+            </center>
+    
+            </div>
+             
+       
         </div>
-        <div class="pricebtn">
-          <center>
-            <a href="#" class="animated-buttonx text-light">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              ksh 570
-            </a>
-          </center>
-        </div>
-      </div>
     </div>
-  </div>
-  
 
-<!-- Inside the corresponding section tag -->
-<div class="col-md-4">
-    <div class="card-shadow">
-      <div class="card-body">
-        <h3 class="text-light">beef</h3>
-        <div class="left bg-warning"></div>
-        <div class="image-container">
-          <img src="images/kenyan-food-ugali.jpg" alt="ugali" width="100%" height="250px" style="border-radius: 10px;">
-          <div class="image-overlay">
-            <span class="image-text">Text on Hover</span>
-          </div>
+</div>
+
+<div class="col-md-4" >
+    <div class="card-shadow " style="width: 400px;" >
+      
+      
+        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.8); border-radius: 10px; padding: 5px;"  >
+            <h3 class="text-light" style="font-family: Pacifico;" > ugali</h3>
+            <div class="left bg-warning" style="width: 80px;" ></div> <br>
+            <img src="images/kenyan-food-ugali.jpg" alt="mutura" width="100%" height="250px" style="border-radius: 10px;" >
+            <div class="pricebtn" >
+                <center>         
+                    <a href="#" class="animated-buttonx text-light">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                ksh 250
+              </a>
+            </center>
+    
+            </div>
+             
         </div>
-        <div class="pricebtn">
-          <center>
-            <a href="#" class="animated-buttonx text-light">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              ksh 570
-            </a>
-          </center>
-        </div>
-      </div>
     </div>
-  </div>
-  
+
+</div>
 
 </section>
 
 <br>
 <section  class="row ms-2" >
 
-    <!-- Inside the corresponding section tag -->
-<div class="col-md-4">
-    <div class="card-shadow">
-      <div class="card-body">
-        <h3 class="text-light">beef</h3>
-        <div class="left bg-warning"></div>
-        <div class="image-container">
-          <img src="images/kenyan-food-chapati.jpg" alt="Chapati" width="100%" height="250px" style="border-radius: 10px;">
-          <div class="image-overlay">
-            <span class="image-text">Text on Hover</span>
-          </div>
+    <div class="col-md-4" >
+        <div class="card-shadow " style="width: 400px;" >
+            <div class="card-body" style="background-color: rgba(0, 0, 0, 0.8);  align-items: center; border-radius: 10px; padding: 5px;"  >
+                <h3 class="text-light" style="font-family: Pacifico;" > chapo</h3>
+                <div class="left bg-warning" style="width: 80px;" ></div> <br>
+             <img src="images/kenyan-food-chapati.jpg" alt="mutura" width="100%" height="250px" style="border-radius: 10px;" >
+             <div class="pricebtn" >
+                <center>         <a href="#" class="animated-buttonx text-light">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                ksh 500
+              </a>
+            </center>
+    
+            </div>
+             
+           
+            </div>
         </div>
-        <div class="pricebtn">
-          <center>
-            <a href="#" class="animated-buttonx text-light">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              ksh 570
-            </a>
-          </center>
-        </div>
-      </div>
+    
     </div>
-  </div>
-  
     
     
     <div class="col-md-4" >
@@ -347,7 +313,7 @@ section{
         </div>
     
     </div>
-    <p></p>
+    
     
     <div class="col-md-4" >
         <div class="card-shadow " style="width: 400px;" >
@@ -495,10 +461,10 @@ section{
 
 <div class="col-md-4" >
     <h5 class="text-light" style="font-family: Pacifico;"  >Our emails</h5>
-    <p class="text-light" >feedback@Vortex Restaurant.ke</p>
-    <p class="text-light" >feedback@Vortex Restaurant.ke </p>
+    <p class="text-light" >inquiry@Vortex Restaurant.ke</p>
+    <p class="text-light" >complaint@Vortex Restaurant.ke </p>
     <p class="text-light" >franchise@Vortex Restaurant.ke</p>
-    <p class="text-light" >inquiryVortexRestaurant@gmail.com</p>
+    <p class="text-light" >feedback@vortexrestaurant@gmail.com</p>
 
 
 
@@ -507,7 +473,7 @@ section{
 <div class="col-md-4" >
 <h5 class="text-light" style="font-family: Pacifico;" >Our socials</h5>
 <p class="text-light" >facebook - @Vortex Restaurant.ke</p>
-<p class="text-light" >instagram - @Vortex Restaurant.ke</p>
+<p class="text-light" >instagram - @Vortex_Restaurant_ke</p>
 <p class="text-light" >twitter - @Vortex Restaurant.ke</p>
 
 </div>
@@ -515,7 +481,7 @@ section{
   
 </footer>
 <center style="background-color: rgba(0, 0, 0, 0.8);">
-    <b style="color: white;" >&copy; 2023  jemuki's</b>
+    <b style="color: white;" >&copy; 2023  Vortex_Restaurant_ke</b>
 </center> 
     
 
