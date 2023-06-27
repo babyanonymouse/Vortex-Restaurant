@@ -52,6 +52,7 @@ section{
 }
 
    .left{
+    margin-bottom: 7px;
     width: 200px;
     height: 5px;
     border-radius: 50%;
@@ -148,9 +149,20 @@ section{
     font-weight: normal;
     color: #fff;
 }
+.text-warning {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+.text-light {
+    text-align: center;
+  }
+  .navbar-scroll {
+    background-color: black !important;
+  }
 
-
-    </style>
+ </style>
 </head>
 <body>
 
@@ -183,6 +195,7 @@ section{
     </header>
     
     
+
     <!-- End the nav bar -->
     <br><br>
     <br><br><br>
@@ -444,7 +457,7 @@ section{
     </div>
     <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.8); border-radius: 10px; position: relative; z-index: 1;">
       <h4 class="text-warning" style="font-family: Pacifico;">Garden City Mall</h4>
-      <h5 class="text-light">on the ground floor , on the west wing near the fashionhub closet.</h5>
+      <h5 class="text-light">Garden City Mall is located in Nairobi, the capital city of Kenya. It is situated along Thika Road, approximately 10 kilometers northeast of the city center. The mall's exact address is Thika Highway, Exit 7B, Nairobi, Kenya. Its strategic location along a major road makes it easily accessible for both local residents and visitors from other parts of the city.</h5>
     </div>
   </section>
   
@@ -546,7 +559,23 @@ section{
     <b style="color: white;" >&copy; 2023  Vortex_Restaurant_ke</b>
 </center> 
     
+<script>
+    // Add an event listener to the window scroll event
+    window.addEventListener('scroll', function() {
+        var cardShadowElement = document.querySelector('.card-shadow');
+        var navbar = document.querySelector('nav.navbar');
+        var cardShadowElementPosition = cardShadowElement.getBoundingClientRect().top;
 
+        // Check if the card-shadow element is in the viewport
+        if (cardShadowElementPosition <= window.innerHeight && cardShadowElementPosition >= 0) {
+            // Add the 'navbar-scroll' class to the navbar
+            navbar.classList.add('navbar-scroll');
+        } else {
+            // Remove the 'navbar-scroll' class from the navbar
+            navbar.classList.remove('navbar-scroll');
+        }
+    });
+</script>
 
 </body>
 </html>
