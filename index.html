@@ -11,11 +11,27 @@
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 
+<style>
+	.carousel-item::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to change the darkness */
+		z-index: 1;
+	}
+	.carousel-caption {
+		z-index: 2;
+	}
+</style>
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 		<div class="container">
-			<a class="navbar-brand" style="font-family: Pacifico;" href="#">vortex</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+			<a class="navbar-brand" style="font-family: pacifico;" href="#">Vortex</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				
 			</div>
