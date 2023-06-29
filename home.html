@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="js/js/bootstrap.js">
-<script src="js/js/bootstrap.js"></script>
+<script async src="js/js/bootstrap.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
@@ -66,8 +66,8 @@ section{
   .mya{
     background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.8) 50%,
+      rgba(255,204,0),
+      rgba(255,204,0) 50%,
       #fff 50%
     );
     background-size: 200% 100%;
@@ -82,7 +82,7 @@ section{
   
   .mya:before{
     content: '';
-    background:  rgba(0, 0, 0, 0.8);
+    background:  rgba(255,204,0);
     display: block;
     position: absolute;
     bottom: -3px;
@@ -99,7 +99,48 @@ section{
   .mya:hover::before{
     width: 100%;
   }
-  .google-map {
+
+
+/*Second bunch*/
+.myb{
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8) 50%,
+      #fff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .myb:before{
+    content: '';
+    background:  rgba(0, 0, 0, 0.8);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .myb:hover {
+   background-position: 0;
+  }
+  
+  .myb:hover::before{
+    width: 100%;
+  }
+  
+/* End of second bunch*/
+.google-map {
     padding-bottom: 50%;
     position: relative;
 }
@@ -176,7 +217,7 @@ section{
     <header class="row" >
      <div class="col-md-12"  >
     
-    <nav class="navbar  navbar-expand-md navbar-warning fixed-top  "  style="padding: 0%;"  >
+    <nav class="navbar  navbar-expand-md  fixed-top  "  style="padding: 0%;"  >
         <a href="index.html" class="navbar-brand" >
            <img src="images/vt.png" alt="our brand"  width="180" height="90" style="border-radius: 10px;  " class="img">  
         </a>
@@ -190,17 +231,42 @@ section{
     
      <div class="collapse navbar-collapse" id="mynav" >  
          <div  class="navbar-nav ms-2 " >
-             <a  href="home.html" class="mya nav-link active" > <h4 style="font-weight:normal; font-family: Roboto Mono;" class="text-light" >Home</h4> </a>
+            <!-- First bunch -->
+            <a  href="home.html" class="mya nav-link active" > <h4 style="font-weight:normal; font-family: Roboto Mono;" class="text-light" >Home</h4> </a>
              <a rel="noopener"  href="#menusec"class=" mya nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >Menu</h4></a>
              <a rel="noopener"  href="#locsec" href=""class="mya  nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >Location</h4></a>
              <a rel="noopener"  href="#aboutsec" href="" class="mya  nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >About</h4></a>
             
+             <!-- Second bunch -->
+            <a  href="home.html" class="myb nav-link active" > <h4 style="font-weight:normal; font-family: Roboto Mono;" class="text-light" >Home</h4> </a>
+             <a rel="noopener"  href="#menusec"class=" myb nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >Menu</h4></a>
+             <a rel="noopener"  href="#locsec" href=""class="myb  nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >Location</h4></a>
+             <a rel="noopener"  href="#aboutsec" href="" class="myb  nav-link"><h4 style="font-weight: normal; font-family: Roboto Mono;" class="text-light" >About</h4></a>
+           
+     
+
          </div>
      </div>
     </nav>
     </div>
     </header>
     
+    
+    <script>
+        
+        window.onload = function(){
+            const myaTags = document.querySelectorAll(".mya");
+            myaTags.forEach(function(tag) {
+              tag.style.display = "inline";
+            });
+    
+            const mybTags = document.querySelectorAll(".myb");
+            mybTags.forEach(function(tag) {
+              tag.style.display = "none";
+            });
+        
+        };
+    </script>
     
 
     <!-- End the nav bar -->
@@ -565,8 +631,12 @@ section{
 <center style="background-color: rgba(0, 0, 0, 0.8);">
     <b style="color: white;" >&copy; 2023  Vortex_Restaurant_ke</b>
 </center> 
+
+
     
 <script>
+
+    
     // Get the navigation element
     var navbar = document.querySelector('.navbar');
   
@@ -597,11 +667,36 @@ section{
       if (scrollDirection === 'down' && currentScrollPosition > welcomeNotePosition) {
         navbar.classList.add('yellow-background');
         navbar.classList.remove('no-transition'); // Remove no-transition class when adding yellow-background class
-      } else if (scrollDirection === 'up' && currentScrollPosition <= welcomeNotePosition) {
+        const mybTags = document.querySelectorAll(".myb");
+        mybTags.forEach(function(tag) {
+          tag.style.display = "inline";
+        });
+
+        const myaTags = document.querySelectorAll(".mya");
+        myaTags.forEach(function(tag) {
+          tag.style.display = "none";
+        });
+    
+
+    } else if (scrollDirection === 'up' && currentScrollPosition <= welcomeNotePosition) {
         navbar.classList.remove('yellow-background');
         navbar.classList.add('no-transition'); // Add no-transition class when removing yellow-background class
-      }
+        const myaTags = document.querySelectorAll(".mya");
+        myaTags.forEach(function(tag) {
+          tag.style.display = "inline";
+        });
+
+        const mybTags = document.querySelectorAll(".myb");
+        mybTags.forEach(function(tag) {
+          tag.style.display = "none";
+        });
+    
+    
+    }
     });
+
+
+    
   
     // Add event listeners for hover and mouseout on navbar-nav items
     var navbarItems = navbarNav.getElementsByTagName('a');
@@ -615,7 +710,12 @@ section{
       // Check if the nav background color is yellow
       if (navbar.classList.contains('yellow-background')) {
         // Change the text color to black on hover
-        event.target.style.color = 'black';
+        //event.target.style.color = 'black';
+
+        //These are my codes
+        
+        //These are my codes
+
       }
     }
   
