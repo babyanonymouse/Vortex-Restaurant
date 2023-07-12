@@ -210,6 +210,35 @@ section{
 .no-transition {
     transition: none !important;
 }
+
+@media (max-width: 768px) {
+            .card-shadow {
+                width: 100%;
+            }
+            .card-shadow:nth-child(1),
+            .card-shadow:nth-child(2),
+            .card-shadow:nth-child(3) {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-shadow {
+                width: 100%;
+            }
+
+            .navbar {
+                padding-right: 10px;
+                
+            }
+        }
+
+        /* Add additional styles for larger screens */
+        @media (min-width: 992px) {
+            .navbar-scroll {
+                padding-right: 90px;
+            }
+        }
  </style>
 </head>
 <body>
